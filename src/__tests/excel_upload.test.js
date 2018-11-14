@@ -13,9 +13,4 @@ it("ExcelUpload renders correctly.", () => {
 	expect ( excelUpload ).toMatchSnapshot();
 });
 
-it('Detects excel upload  change ', () => {
- 	
- 	//excelUpload.find(".file_btn").simulate("change");
- 	 
-}) ; 
  

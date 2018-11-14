@@ -2,8 +2,6 @@
 export default function local_store_reducer (state = {} , action ) {
 	//console.log("local_store_reducer().. " + action.excel_content);	
 	//console.log( state );
-
-	console.log("local_store_reducer. Action type  is ... " + action.type );
 	switch( action.type ) {
 
 		case "CONNECTION_VERIFIED":

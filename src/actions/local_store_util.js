@@ -1,5 +1,5 @@
 class LocalStoreUtil {
-
+	
 	constructor() {
 
 	}
@@ -8,7 +8,6 @@ class LocalStoreUtil {
 		//console.log("Save new excel");
 		var cstr = JSON.stringify( content );
 		localStorage.setItem ( "app_xls" , cstr );
-		return 
 	}
 
 	get_prev_excel = () => {
