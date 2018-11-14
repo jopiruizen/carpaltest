@@ -9,8 +9,6 @@ export async function  parse_excel ( excel ) {
 	var util = new LocalStoreUtil();
 	util.save_new_excel (   content_json );
 
-	
-	//console.log("Excell parsed..." + content_json );
 	return  {
 		type: "EXCEL_PARSED",
 		excel_content: content_json

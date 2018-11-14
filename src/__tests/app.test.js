@@ -8,7 +8,7 @@ import  App  from "../containers/App";
  
 
 
-/* boiler plate */
+/* boilerplate */
 import {Provider} from 'react-redux';
 import {createStore, applyMiddleware} from 'redux';
 import promiseMiddleware from 'redux-promise';

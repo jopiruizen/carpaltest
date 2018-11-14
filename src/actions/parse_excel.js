@@ -7,11 +7,26 @@ class ParseExcel  {
 	 
 	}
 
+  has_error = (target) =>  {
+      if( target === null || target === undefined ) {  return true;  }
+      if( target.files === null || target.files === undefined ) { return true; }
+      if( target.files.length === 0 ) { return true; }
+      return false;
+  }
+
+  promise_with_error  = () => {
+     const promise_func = ( resolve, reject ) => {
+        resolve({ error: "malformed object error" , message: "the parameter passed  didn't come from a file select/change event."});
+     }
+     return new Promise ( promise_func );
+  } 
+
 	promise_parse = ( target ) => {
+    if( this.has_error ( target ) ) { return this.promise_with_error(); }
+
 
  		var file = target.files[0];
  		//console.log("reading file...");
-
  		var helper = this.formalize_for_state;
 
  		const  promise_func = ( resolve, reject ) => {
@@ -39,9 +54,7 @@ class ParseExcel  {
  		};
 
 
- 		var promise = new Promise( promise_func );
- 	 
- 		return promise;
+ 		return new Promise( promise_func );
  	}
 
 }
